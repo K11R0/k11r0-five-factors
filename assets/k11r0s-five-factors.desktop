@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=K11R0's Five Factors
+Exec=/opt/k11r0s-five-factors/k11r0s-five-factors
+Icon=k11r0s-five-factors
+Terminal=false
+Categories=Utility;
+Comment=Accurate game ratings through factor analysis

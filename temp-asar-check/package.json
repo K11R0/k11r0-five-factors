@@ -1,0 +1,28 @@
+{
+  "name": "k11r0s-five-factors",
+  "author": {
+    "name": "K11R0",
+    "email": "happydotexe@gmail.com"
+  },
+  "version": "0.1.0",
+  "private": true,
+  "main": "build/electron.js",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

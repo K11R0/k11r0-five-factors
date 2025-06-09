@@ -1,39 +1,52 @@
 {
   "name": "k11r0s-five-factors",
   "version": "0.1.0",
+  "description": "K11R0's Five Factors - game rating app using customizable factors",
+  "author": "K11R0 <happydotexe@gmail.com>",
   "private": true,
-  "dependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "main": "electron.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "electron": "electron .",
+    "dist": "npm run build && electron-builder"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.k11r0.fivefactors",
+    "productName": "K11R0's Five Factors",
+    "files": [
+      "build/**/*",
+      "electron.js",
+      "preload.js"
+    ],
+    "extraResources": [
+      {
+        "from": "assets/k11r0s-five-factors.desktop",
+        "to": "usr/share/applications/k11r0s-five-factors.desktop"
+      }
+    ],
+    "linux": {
+      "target": ["AppImage"],
+      "category": "Utility",
+      "maintainer": "K11R0 <happydotexe@gmail.com>",
+      "vendor": "K11R0",
+      "synopsis": "Accurate game ratings through factor analysis",
+      "description": "K11R0's Five Factors is a data-driven platform to rate games using customizable factors, weight mapping, and modular evaluation systems.",
+      "icon": "assets/icon.png"
+    }
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   }
 }
